@@ -1,0 +1,7 @@
+{
+    "jscodehints.detectedExclusions": [
+        "D:/ProductCatlog/www/js/Controller/FilterController.js",
+        "D:/ProductCatlog/www/js/app.js",
+        "D:/ProductCatlog/www/js/Controller/TagInfoController.js"
+    ]
+}

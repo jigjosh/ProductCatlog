@@ -1,0 +1,9 @@
+<h2 translate-cloak>
+    <ul class="breadcrumbs">
+        <li ng-repeat="breadcrumb in Breadcrumbs.list()">
+            <a ng-if="breadcrumb.state && !$last" ui-sref="{{breadcrumb.state}}">{{breadcrumb.title | translate}}</a>
+            <span class="active" ng-show="$last">{{breadcrumb.title | translate}}</span>
+            <span ng-hide="$last" class="divider"></span>
+        </li>
+    </ul>
+</h2>

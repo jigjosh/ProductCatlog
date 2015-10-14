@@ -1,0 +1,86 @@
+<ion-view title={{vm.Status}} ng-controller="ImageController as vm">
+
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+        <!--<a ng-click="vm.backview()" ng-hide="(vm.currentView === 0)" href="#" class="button ion-ios-arrow-back"></a>-->
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+        <!--        <a ng-click="vm.filterview()" href="#" class="button ion-funnel" ></a>-->
+        <a ng-class="{'filterOn': vm.filterOn === 1}"  class="button ion-funnel" ng-click="vm.filterview()"></a>
+    </ion-nav-buttons>
+
+    <ion-header-bar class="bar bar-subheader bar-stable">
+        <div class="title-left">
+            <a ng-click="vm.gotoview(0)" 
+                   class="button icon-left button-clear button-dark">Home</a>
+            <a ng-click="vm.gotoview(1)" 
+                   ng-hide="(vm.level1Index === '')" 
+                   class="button button-clear button-dark"> > {{vm.level1Index}}</a>
+            <a ng-click="vm.gotoview(2)" 
+                   ng-hide="(vm.level2Index === '')" 
+                   class="button button-clear button-dark"> > {{vm.level2Index}}</a>
+        </div>
+    </ion-header-bar>
+    <ion-content style='overflow-scroll="true"'>
+
+        <div class="row" ng-repeat="image in vm.images track by $index" ng-if="$index % 3 === 0">
+            <div class="col col-33 imagelink" ng-if="$index < vm.images.length">
+                <a ng-click="vm.drilldown(vm.images[$index].id)">
+                    <div ng-class="vm.imageClass" style="background-image: url( {{vm.images[$index].src}});
+                                                       background-size: 100% 100%;
+                                                       background-position: center, center;
+                                                       background-repeat: no-repeat"></div>
+                    <h5 class="imagecaption">{{vm.images[$index].tagno}}</h5>
+
+                </a>
+
+            </div>
+            <div class="col col-33 imagelink" ng-if="$index + 1 < vm.images.length">
+                <a ng-click="vm.drilldown(vm.images[$index+1].id)">
+                    <div ng-class="vm.imageClass" style="background-image: url( {{vm.images[$index+1].src}});
+                                                           background-size: 100% 100%;
+                                                           background-position: center, center;
+                                                           background-repeat: no-repeat"></div>
+                    <h5 class="imagecaption">{{vm.images[$index + 1].tagno}}</h5>
+                </a>
+            </div>
+            <div class="col col-33 imagelink" ng-if="$index + 2 < vm.images.length">
+                <a ng-click="vm.drilldown(vm.images[$index+2].id)">
+                    <div ng-class="vm.imageClass" style="background-image: url( {{vm.images[$index+2].src}});
+                                                           background-size: 100% 100%;
+                                                           background-position: center, center;
+                                                           background-repeat: no-repeat"></div>
+                    <h5 class="imagecaption">{{vm.images[$index+2].tagno}}</h5>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+
+    <ion-footer-bar class="bar-stable">
+        <div class="title title-center header-item"><img src="img/customer-logo.png" width="100px" style="padding-top:8px"> </div>
+    </ion-footer-bar>
+
+</ion-view>
+
+<!--
+
+<div class="gridimg" 
+             item-width="vm.itemwidth" 
+             item-height="vm.itemheight" 
+             collection-repeat="image in vm.images"
+             >
+
+            <a  ng-click="vm.drilldown(image.id)" >
+                <div  ng-class="vm.imageClass"  style="background-image: url( {{::image.src}});
+                                                       background-size: 100% 100%;
+                                                       background-position: center, center;
+                                                       background-repeat: no-repeat"></div>
+                      img width="vm.imageHeightWidth" height="vm.imageHeightWidth" ng-src="{{image.src}}"
+                <h5 class="imagecaption">{{image.tagno}}</h5>
+                
+            </a>
+        </div>
+-->
+
+<!--ng-repeat="image in vm.images track by image.id"             >-->

@@ -1,0 +1,179 @@
+<ion-view title="{{vm.title}}" ng-controller="TagInfoController as vm">
+
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+        <a ng-click="vm.closetagDetail()" href="#" class="button ion-close-round"></a>
+    </ion-nav-buttons>
+
+    <ion-header-bar class="bar bar-subheader">
+        <h5  class="title-left">
+            <a ng-click="vm.gotoview(0)" class="button  button-clear button-dark">Home</a>
+            <a ng-click="vm.gotoview(1)" 
+                   ng-hide="(vm.brandIndex === '')" 
+                   class="button  button-clear button-dark"> > {{vm.brandIndex}}</a>
+            <a ng-click="vm.gotoview(2)" 
+                   ng-hide="(vm.jewelleryTypeIndex === '')" 
+                   class="button button-clear button-dark"> > {{vm.jewelleryTypeIndex}}</a>
+            
+            </a>
+            <div class="nooftags">{{vm.tagIndex + 1}} Of {{vm.totaltag}} </div>
+          
+        </h5>
+    
+    </ion-header-bar>
+    <ion-content class="has-header">
+
+        <ion-slide-box on-slide-changed="vm.slideChanged($index)" 
+                       active-slide="vm.selectedSlide" 
+                       does-continue="true" show-pager="false">
+
+            <ion-slide ng-repeat="slide in vm.slides">
+                <div class="flex-container-vert">
+
+                    <div style="height:30%;padding: 5px; ">
+                        <ion-scroll class="scrollCanvas" zooming="true" min-zoom="1" direction="xy" locked="false">
+                            <div class="image" style="background: url({{slide.imagesrc}});
+                                                      background-size: 100% 100%;
+                                                      background-position: center, center;
+                                                      background-repeat: no-repeat"></div>
+                        </ion-scroll>
+
+                    </div>
+                </div>
+
+                <div style="height:70%;overscroll: auto; padding: 5px; ">
+                    <div class="row row-center">
+                        <div class="col col-center">
+                            <h4> Specification( {{slide.currentTag.SRNo}})</h4>
+                        </div>
+                    </div>
+                    <ion-scroll>
+                        <ion-list>
+                            <ion-item class="itemspecification-odd bar-stable">
+                                <div class="row">
+                                    <div class="col col-25">
+                                        <h4  > SRNo</h4>
+                                        </div>:
+                                        <div class="col col-75">
+                                            <h4>{{slide.currentTag.SRNo}}</h4>
+                                        </div>
+                                    </div>
+                                </ion-item>
+                                <ion-item class="itemspecification-even">
+                                    <div class="row">
+                                        <div class="col col-25">
+                                            <h4  > Item Description </h4> </div>:
+                                        <div class="col col-75">
+                                            <h4>{{slide.currentTag.ItemDescription}}</h4> </p>
+                                        </div>
+                                    </div>
+                                </ion-item>
+                                <ion-item class="itemspecification-odd">
+                                    <div class="row">
+                                        <div class="col col-25"><h4  > Brand </h4> </div>:
+                                        <div class="col col-75">
+                                            <h4>{{slide.currentTag.Brand}}</h4>
+                                        </div>
+                                    </div>
+                                </ion-item>
+                                <ion-item class="itemspecification-even">
+                                    <div class="row">
+                                        <div class="col col-25">
+                                            <h4  > Supplier No </h4> 
+                                        </div>:
+                                        <div class="col col-75">
+                                            <h4>{{slide.currentTag.SupplierRefNo}}</h4> </p>
+                                        </div>
+                                    </div>
+                                </ion-item>
+                                <ion-item class="itemspecification-odd">
+                                    <div class="row">
+                                        <div class="col col-25"><h4  > Diamond Detail </h4> </div>:
+                                        <div class="col col-75">
+                                            <h4>{{slide.currentTag.DiamondQuantityDetail}}</h4>
+                                        </div>
+                                    </div>
+                                </ion-item>
+                                <ion-item class="itemspecification-even">
+                                    <div class="row">
+                                        <div class="col col-25">
+                                            <h4  > TaggingLine1 </h4> </div>:
+                                        <div class="col col-75">
+                                            <h4>{{slide.currentTag.TaggingLine1}}</h4>
+                                        </div>
+                                    </div>
+                                </ion-item>
+                                <ion-item class="itemspecification-odd">
+                                    <div class="row">
+                                        <div class="col col-25">
+                                            <h4  > TaggingLine2 </h4>
+                                        </div>:
+                                        <div class="col col-75">
+                                            <h4>{{slide.currentTag.TaggingLine2}}</h4>
+                                        </div>
+                                    </div>
+                                </ion-item>
+                                <ion-item class="itemspecification-even">
+                                    <div class="row">
+                                        <div class="col col-25">
+                                            <h4  > TaggingLine3 </h4> </div>:
+                                        <div class="col col-75">
+                                            <h4>{{slide.currentTag.TaggingLine3}}</h4>
+                                        </div>
+                                    </div>
+                                </ion-item>
+                                <ion-item class="itemspecification-odd">
+                                    <div class="row">
+                                        <div class="col col-25">
+                                            <h4  > Category </h4> </div>:
+                                        <div class="col col-75">
+                                            <h4>{{slide.currentTag.Category}}</h4>
+                                        </div>
+                                    </div>
+                                </ion-item>
+                                <ion-item class="itemspecification-even">
+                                    <div class="row">
+                                        <div class="col col-25">
+                                            <h4  > Jewellery </h4> </div>:
+                                        <div class="col col-75">
+                                            <h4>{{slide.currentTag.JewelleryType}}</h4>
+                                        </div>
+                                    </div>
+                                </ion-item>
+                                <ion-item class="itemspecification-odd">
+                                    <div class="row">
+                                        <div class="col col-25">
+                                            <h4  > TagPrice </h4> </div>:
+                                        <div class="col col-75">
+                                            <h4>{{slide.currentTag.TagPriceBC | currency:"AED ":0 }}</h4>
+                                        </div>
+                                    </div>
+                                </ion-item>
+                                <ion-item class="itemspecification-even">
+                                    <div class="row">
+                                        <div class="col col-25">
+                                            <h4  > Location </h4> </div>:
+                                        <div class="col col-75">
+                                            <h4>{{slide.currentTag.Location}}</h4>
+                                        </div>
+                                    </div>
+                                </ion-item>
+                            </ion-list>
+                        </ion-scroll>
+
+                    </div>
+
+            </ion-slide>
+
+
+        </ion-slide-box>
+
+    </ion-content>
+
+    <ion-footer-bar class="bar-stable">
+        <div class="title title-center header-item"><img src="img/customer-logo.png" width="100px" style="padding-top:8px"> </div>
+    </ion-footer-bar>
+</ion-view>

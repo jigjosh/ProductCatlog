@@ -1,0 +1,84 @@
+<div class="modal image-modal transparent">
+    <ion-view>
+        <div class="bar bar-header bar-stable">
+            <h1 class="title">Tag Information</h1>
+            <a side="right" ng-click="vm.closeModal()" href="#" class="button button-stable"> X</a>
+        </div>
+        
+        <ion-slide-box on-slide-changed="vm.slideChanged($index)" 
+                       active-slide="vm.ActiveSlide"
+                       show-pager="false" class="has-header">
+            <ion-slide ng-repeat="image in vm.slideimages">
+                <div class="row">
+                    <div class="col col-30"> SRNo </div>:
+                    <div class="col col-70"> {{image.tagno}} </div>
+                </div>
+                <div class="row">
+                    <div class="col col-10"></div>
+                    <div class="col col-80">
+                        <div class="container" ng-if="vm.slideVisible($index)" class="scrollCanvas">
+                            <ion-scroll class="scrollCanvas" zooming="true" min-zoom="1" direction="xy" locked="false">
+                                <div class="image" style="background-image: url( {{image.src}} )"></div>
+                            </ion-scroll>
+                        </div>
+                    </div>
+                    <div class="col col-10"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-30"> SRNo </div>:
+                    <div class="col col-70"> {{vm.currentTag.SRNo}} </div>
+                </div>
+                <div class="row">
+                    <div class="col col-30"> Item Description </div>:
+                    <div class="col col-70"> {{vm.currentTag.ItemDescription}} </div>
+                </div>
+                <div class="row">
+                    <div class="col col-30"> Brand </div>:
+                    <div class="col col-70"> {{vm.currentTag.Brand}} </div>
+                </div>
+                <div class="row">
+                    <div class="col col-30"> Supplier No </div>:
+                    <div class="col col-70"> {{vm.currentTag.SupplierRefNo}} </div>
+                </div>
+                <div class="row">
+                    <div class="col col-30"> Diamond Detail </div>:
+                    <div class="col col-70"> {{vm.currentTag.DiamondQuantityDetail}} </div>
+                </div>
+                <div class="row">
+                    <div class="col col-30"> TaggingLine1 </div>:
+                    <div class="col col-70"> {{vm.currentTag.TaggingLine1}} </div>
+                </div>
+                <div class="row">
+                    <div class="col col-30"> TaggingLine2 </div>:
+                    <div class="col col-70"> {{vm.currentTag.TaggingLine2}} </div>
+                </div>
+                <div class="row">
+                    <div class="col col-30"> TaggingLine3 </div>:
+                    <div class="col col-70"> {{vm.currentTag.TaggingLine3}} </div>
+                </div>
+                <div class="row">
+                    <div class="col col-30"> Category </div>:
+                    <div class="col col-70"> {{vm.currentTag.Category}} </div>
+                </div>
+                <div class="row">
+                    <div class="col col-30"> Jewellery </div>:
+                    <div class="col col-70"> {{vm.currentTag.JewelleryType}} </div>
+                </div>
+                <div class="row">
+                    <div class="col col-30"> TagPrice </div>:
+                    <div class="col col-70"> {{vm.currentTag.TagPrice}} </div>
+                </div>
+                <div class="row">
+                    <div class="col col-30"> Location </div>:
+                    <div class="col col-70"> {{vm.currentTag.Location}} </div>
+                </div>
+
+
+                <div class="row">
+
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+    </ion-view>
+</div>

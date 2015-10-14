@@ -1,0 +1,30 @@
+<ion-view title="{{vm.title}}" ng-controller="SyncController as vm">
+
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+        <a ng-click="vm.syncimages()" href="#" class="button icon-left ion-android-sync"></a>
+    </ion-nav-buttons>
+
+
+    <ion-content has-header="true" padding="true">
+        <div class="list  list-inset">
+            <label class="item item-input">
+                <input type="text" ng-model="vm.tagNo" placeholder="tagNo"></input>
+            </label>
+        </div>
+        <div class="list  list-inset">
+            <label class="item item-input">
+                <h4>{{vm.Status}}</h4>
+            </label>
+        </div>
+    
+        
+    </ion-content>
+
+    <ion-footer-bar class="bar-stable">
+        <div class="title title-center header-item"><img src="img/customer-logo.png" width="100px" style="padding-top:8px"> </div>
+    </ion-footer-bar>
+</ion-view>
