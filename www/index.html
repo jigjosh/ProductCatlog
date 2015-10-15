@@ -41,21 +41,10 @@
 
 </head>
 
-<!--    ng-app="Catlog"-->
-<body >
+<!--    -->
+<body ng-app="Catlog"
     <ion-nav-view></ion-nav-view>
 </body>
- <script>
-    angular.element(document).ready(function() {
-    if (window.cordova) {
-        document.addEventListener('deviceready', function() {
-            angular.bootstrap(document.body, ['Catlog']);
-        }, false);
-    } else {
-        angular.bootstrap(document.body, ['Catlog']);
-    }
-});
-</script>
 </html>
 
 
