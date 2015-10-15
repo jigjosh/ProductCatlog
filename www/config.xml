@@ -40,9 +40,14 @@
         Define a specific version of PhoneGap to build into your app.
         <preference name="phonegap-version"       value="3.5.0" />
     -->
+    
+        <!--gap:platform name="android" />
+        <gap:platform name="ios" /-->
+        <gap:platform name="winphone" />
 
     <!-- Plugins -->
-
+        
+    
 
     
     <gap:plugin name="io.litehelpers.cordova.sqlitestorage"  version="0.7.5" />
