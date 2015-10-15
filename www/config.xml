@@ -53,21 +53,21 @@
     <!--gap:plugin name="cordova-plugin-file" source="npm" version="3.0.0" /-->
     <gap:plugin name="cordova-plugin-file-transfer" source="npm"  />
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
-    <gap:plugin name="io.litehelpers.cordova.sqlitestorage"  version="0.7.5" />
-    <gap:plugin name="org.apache.cordova.battery-status" version="0.2.11" />
-    <gap:plugin name="org.apache.cordova.camera" version="0.3.2" />
-    <gap:plugin name="org.apache.cordova.contacts" version="0.2.13" />
-    <gap:plugin name="org.apache.cordova.device" version="0.2.12" />
-    <gap:plugin name="org.apache.cordova.device-motion" version="0.2.10" />
-    <gap:plugin name="org.apache.cordova.device-orientation" version="0.3.9" />
-    <gap:plugin name="org.apache.cordova.dialogs" version="0.2.10" />
-    <gap:plugin name="org.apache.cordova.geolocation" version="0.3.10" />
-    <gap:plugin name="org.apache.cordova.globalization" version="0.3.1" />
-    <gap:plugin name="org.apache.cordova.media" version="0.2.13" />
-    <gap:plugin name="org.apache.cordova.media-capture" version="0.3.3" />
-    <gap:plugin name="org.apache.cordova.network-information" version="0.2.12" />
-    <gap:plugin name="org.apache.cordova.splashscreen" version="0.3.4" />
-    <gap:plugin name="org.apache.cordova.vibration" version="0.3.11" />
+    <gap:plugin name="io.litehelpers.cordova.sqlitestorage"  source="npm" version="0.7.5" />
+    <gap:plugin name="org.apache.cordova.battery-status" source="npm" version="0.2.11" />
+    <gap:plugin name="org.apache.cordova.camera" source="npm" version="0.3.2" />
+    <gap:plugin name="org.apache.cordova.contacts" source="npm" version="0.2.13" />
+    <gap:plugin name="org.apache.cordova.device" source="npm" version="0.2.12" />
+    <gap:plugin name="org.apache.cordova.device-motion" source="npm" version="0.2.10" />
+    <gap:plugin name="org.apache.cordova.device-orientation" source="npm" version="0.3.9" />
+    <gap:plugin name="org.apache.cordova.dialogs" source="npm" version="0.2.10" />
+    <gap:plugin name="org.apache.cordova.geolocation" source="npm" version="0.3.10" />
+    <gap:plugin name="org.apache.cordova.globalization" source="npm" version="0.3.1" />
+    <!--gap:plugin name="org.apache.cordova.media" source="npm" version="0.2.13" />
+    <gap:plugin name="org.apache.cordova.media-capture" version="0.3.3" /-->
+    <gap:plugin name="org.apache.cordova.network-information" source="npm" version="0.2.12" />
+    <gap:plugin name="org.apache.cordova.splashscreen"source="npm"  version="0.3.4" />
+    <gap:plugin name="org.apache.cordova.vibration" source="npm" version="0.3.11" />
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
 
    
