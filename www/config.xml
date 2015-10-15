@@ -50,7 +50,7 @@
     
 
     
-    <gap:plugin name="cordova-plugin-file" source="npm" version="3.0.0" />
+    <!--gap:plugin name="cordova-plugin-file" source="npm" version="3.0.0" /-->
     <gap:plugin name="cordova-plugin-file-transfer" source="npm"  />
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
     <gap:plugin name="io.litehelpers.cordova.sqlitestorage"  version="0.7.5" />
