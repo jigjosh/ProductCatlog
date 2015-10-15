@@ -61,14 +61,14 @@
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
     <gap:plugin name="io.litehelpers.cordova.sqlitestorage" source="npm" />
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
-    <!--gap:plugin name="org.apache.cordova.battery-status" source="npm" />
+    <gap:plugin name="org.apache.cordova.battery-status" source="npm" />
     <gap:plugin name="org.apache.cordova.camera" source="npm" />
     <gap:plugin name="org.apache.cordova.contacts" source="npm" />
     <gap:plugin name="org.apache.cordova.device" source="npm" />
     <gap:plugin name="org.apache.cordova.dialogs" source="npm" />
     <gap:plugin name="org.apache.cordova.network-information" source="npm" />
     <gap:plugin name="org.apache.cordova.splashscreen" source="npm" />
-    <gap:plugin name="org.apache.cordova.vibration" source="npm" /-->
+    <gap:plugin name="org.apache.cordova.vibration" source="npm" />
 
 
     <!--gap:plugin name="org.apache.cordova.device-motion" source="npm" />
