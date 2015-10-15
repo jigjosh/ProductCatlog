@@ -47,10 +47,11 @@
 
     <!-- Plugins -->
         
-    <!--gap:plugin name="cordova-plugin-file" source="npm" version="3.0.0" />
+    <gap:plugin name="cordova-plugin-file" source="npm" />
     <gap:plugin name="cordova-plugin-file-transfer" source="npm"  />
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
     <gap:plugin name="io.litehelpers.cordova.sqlitestorage"  source="npm"  />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="org.apache.cordova.battery-status" source="npm"/>
     <gap:plugin name="org.apache.cordova.camera" source="npm" />
     <gap:plugin name="org.apache.cordova.contacts" source="npm" />
@@ -59,7 +60,7 @@
     <gap:plugin name="org.apache.cordova.network-information" source="npm"  />
     <gap:plugin name="org.apache.cordova.splashscreen"source="npm"  />
     <gap:plugin name="org.apache.cordova.vibration" source="npm" />
-    <gap:plugin name="cordova-plugin-whitelist" source="npm" /-->
+    
     
     <!--gap:plugin name="org.apache.cordova.device-motion" source="npm" />
     <gap:plugin name="org.apache.cordova.device-orientation" source="npm" version="0.3.9" />
