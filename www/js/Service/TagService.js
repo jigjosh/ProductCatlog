@@ -419,8 +419,6 @@
         //Get data from Server and sync to Local Database
         function getSyncTags(tagNo, pageNo) {
             
-            alert(AppUrls.dataURL + 'uspGetProductsByTagNoAndPage');
-
             var config = {
                 headers: {
                     'Content-Type': 'application/json'

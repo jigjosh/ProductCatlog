@@ -55,8 +55,6 @@
                 if (window.cordova) {
                     targetPath = cordova.file.dataDirectory + "Images/" + imageName + '.jpg';
 
-                    alert(targetPath);
-
                     $cordovaFileTransfer.download(url, targetPath, options, trustHosts)
                         .then(function (result) {
                             _this.images.push({
